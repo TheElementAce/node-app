@@ -3,8 +3,10 @@ const path = require('path');
 
 const app = express();
 
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/index-digital-creative.html'));
+    res.sendFile(path.join(__dirname + '/public/index-digital-creative.html'));
 });
 
 app.listen(5000, () => {
